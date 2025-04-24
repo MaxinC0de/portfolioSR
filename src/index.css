@@ -1,0 +1,69 @@
+@import "modern-normalize/modern-normalize.css";
+@import "tailwindcss";
+
+html {
+  background-color: black;
+  font-family: "stretch";
+  padding: 5%;
+}
+
+.button {
+  appearance: none;
+  margin: 0;
+}
+
+@layer utilities {
+  .text-primary {
+    color: #ff0000;
+  }
+  .bg-primary {
+    background-color: #ff0000;
+  }
+  .text-inter {
+    font-family: "inter";
+  }
+  .text-ibm {
+    font-family: "ibm";
+  }
+  .text-dm {
+    font-family: "dm";
+  }
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-in;
+  }
+  .animate-fade-out {
+    animation: fade-out 0.5s ease-out;
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+}
+
+@font-face {
+  font-family: "stretch";
+  src: url("/src/fonts/stretch.otf");
+}
+
+@font-face {
+  font-family: "inter";
+  src: url("/src/fonts/inter.ttf");
+}
+
+@font-face {
+  font-family: "ibm";
+  src: url("/src/fonts/ibm.ttf");
+}
+
+@font-face {
+  font-family: "dm";
+  src: url("/src/fonts/dm.ttf");
+}
+
+input::placeholder {
+  font-family: "inter";
+}
