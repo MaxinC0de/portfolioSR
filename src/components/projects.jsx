@@ -21,23 +21,26 @@ export default function Projects() {
     )
     return(
         <div className="text-white">
+            <div className="border-2 border-white h-18 overflow-scroll">
+                <h1 className="text-[10px] text-center font-extrabold text-dm"><Plus />NOS PROJETS<Plus /></h1>
+                <div className="bg-white w-full h-[0.5px] my-1.5"></div>
+                {PROJECTS.map(({ title, description }, i) => (
+                    <div className="flex flex-col gap-2">
+                        <div className="flex justify-between text-ibm text-[10px]">
+                            <p className="cursor-pointer">{title}</p>
+                            <div className="flex items-center">
+                                <p className="">{description}</p>
+                                <img className="size-2 ml-2" src="/images/down.png" alt="" />
+                            </div>
+                        </div>
+                        <Divider />
+                    </div>
+                ))}
+            </div>
             <div className="-mx-[5%]">
                 <img className="w-full" src="/images/banner.png" alt="" />
             </div>
-            <h1 className="text-[10px] text-center font-extrabold text-dm"><Plus />NOS PROJETS<Plus /></h1>
-            <div className="bg-white w-full h-[0.5px] my-1.5"></div>
-            {PROJECTS.map(({ title, description }, i) => (
-                <div className="flex flex-col gap-2">
-                    <div className="flex justify-between text-ibm text-[10px]">
-                        <p className="cursor-pointer">{title}</p>
-                        <div className="flex items-center">
-                            <p className="">{description}</p>
-                            <img className="size-2 ml-2" src="/images/down.png" alt="" />
-                        </div>
-                    </div>
-                    <Divider />
-                </div>
-            ))}
+            
 
 
             <img src="/images/cinema.png" alt="" />
