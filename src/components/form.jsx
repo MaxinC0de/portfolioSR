@@ -62,7 +62,7 @@ export default function Form() {
                     {BUTTONS_LABELS.map((button, i) => (
                         <button
                             type="button"
-                            className="text-[6px] text-inter border-1 rounded-md p-1 cursor-pointer focus:bg-white focus:text-black transition-colors duration-800"
+                            className="text-[6px] text-inter border-1 rounded-md p-1 cursor-pointer focus:bg-[#ff0000] focus:border-[#ff0000] transition-colors duration-800"
                             onClick={() => {setProjectType(button)}}
                         >
                             {button}

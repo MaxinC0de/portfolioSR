@@ -7,7 +7,6 @@ export default function ProjectDetail () {
         avarin: {
             title: "[AVARIN LTD]",
             secondTitle: "Avarin Ltd",
-            year: 2023,
             src: "avarin.png",
             p: [
                 ", une jeune agence de marketing tournée vers l’innovation, cherchait à renforcer sa présence numérique pour accompagner sa phase de lancement.",
@@ -38,7 +37,10 @@ export default function ProjectDetail () {
                 </div>
                 <div className="flex justify-between mt-4">
                     <h1>{`${projectData.title}`}</h1>
-                    <h2>{projectData.year}</h2>
+                    <div className="flex items-center gap-2">
+                        <h2 className="text-ibm-light">LIEN</h2>
+                        <a target="_blank" href="https://avarinltd.com"><img className="cursor-pointer size-3" src="/images/up.png" alt="" /></a>
+                    </div>
                 </div>
                 <span className="flex justify-center"><img className="my-5 w-full" src={`/images/projects/${projectData.src}`} alt="" /></span>
                 <p className="text-stretch text-[9px] opacity-80">DETAILS DU PROJET</p>

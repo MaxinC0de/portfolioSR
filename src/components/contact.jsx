@@ -1,4 +1,4 @@
-import Form from "../components/form";
+import Form from "./form";
 
 export default function Contact() {
     const LABELS = [
@@ -25,7 +25,7 @@ export default function Contact() {
       ];
       
     return(
-        <div className="text-white text-[10px]">
+        <div className="h-screen text-white text-[10px]">
           <p className="text-[#b5b5b5]">DEMANDE DE PROJET</p>
             {LABELS.map(({ first, second }, index) => (
                 <div className="my-4 text-inter">

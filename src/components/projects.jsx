@@ -34,7 +34,10 @@ export default function Projects() {
     )
     return(
         <div className="text-white mt-6">
-            <div className="border-1 border-white rounded-md h-[30vh] overflow-scroll p-5" style={{ overflowX: "hidden" }}>
+            <div className="-mx-[5%]">
+                <img className="w-full" src="/images/banner.png" alt="" />
+            </div>
+            <div className="border-white rounded-md h-[30vh] overflow-scroll p-5" style={{ overflowX: "hidden" }}>
                 <h1 className="text-[10px] text-center font-extrabold text-dm"><Plus />NOS PROJETS<Plus /></h1>
                 <div className="bg-white w-full h-[0.5px] my-1.5"></div>
                 {PROJECTS.map(({ title, description, project }, i) => (
@@ -43,15 +46,12 @@ export default function Projects() {
                             <NavLink to={`/${project}`}><p className="cursor-pointer">{title}</p></NavLink>
                             <div className="flex items-center">
                                 <p className="text-ibm-light">{description}</p>
-                                <NavLink to={`/${project}`}><img className="size-2 ml-2" src="/images/down.png" alt="" /></NavLink>
+                                <NavLink to={`/${project}`}><img className="size-2 ml-2" src="/images/up.png" alt="" /></NavLink>
                             </div>
                         </div>
                         <Divider />
                     </div>
                 ))}
-            </div>
-            <div className="-mx-[5%]">
-                <img className="w-full" src="/images/banner.png" alt="" />
             </div>
             <img src="/images/cinema.png" alt="" />
             <div>

@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import Home from "./pages/home"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Contact from "./pages/contact"
 import ProjectDetail from './pages/projectDetail'
 
 createRoot(document.getElementById('root')).render(
@@ -11,7 +10,6 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/:project" element={<ProjectDetail />} />
       </Routes>
     </BrowserRouter>
