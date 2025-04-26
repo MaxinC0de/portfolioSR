@@ -6,6 +6,7 @@ html {
   background-color: black;
   font-family: "stretch";
   font-variant-ligatures: none;
+  overflow-x: hidden;
 }
 
 .button {
