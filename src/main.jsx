@@ -4,6 +4,7 @@ import './index.css'
 import Home from "./pages/home"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Contact from "./pages/contact"
+import ProjectDetail from './pages/projectDetail'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -11,6 +12,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/:project" element={<ProjectDetail />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
