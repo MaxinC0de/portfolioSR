@@ -1,6 +1,7 @@
 import Form from "./form";
+import Footer from "./footer"
 
-export default function Contact() {
+export default function Contact({ contactIsOpen, setContactIsOpen }) {
     const LABELS = [
         {
           first: "Salut !",
@@ -25,14 +26,23 @@ export default function Contact() {
       ];
       
     return(
-        <div className="h-screen text-white text-[10px]">
-          <p className="text-[#b5b5b5]">DEMANDE DE PROJET</p>
-            {LABELS.map(({ first, second }, index) => (
-                <div className="my-4 text-inter">
-                    <p className=""><span className="font-extrabold">{first}</span> {second}</p>
-                </div>
-            ))}
-            <Form />
+        <div className="container mx-auto">
+          <div className="h-screen text-white text-[10px]">
+            <div className="text-[#ff0000] cursor-pointer text-right mt-2 lg:mt-6" onClick={() => {setContactIsOpen(false)}}><p className="text-base lg:text-4xl">x</p></div>
+              <div className="flex items-center blur-[2px] lg:pt-6">
+                  <div className="h-0.5 w-full bg-white"></div>
+                  <div className="transform rotate-10 ml-2 text-2xl">+</div>
+              </div>
+              <p className="text-[#b5b5b5] mt-4 lg:mt-12 lg:text-2xl">DEMANDE DE PROJET</p>
+              
+              {LABELS.map(({ first, second }, index) => (
+                  <div className="my-4 text-inter">
+                      <p className="lg:text-2xl"><span className="font-extrabold">{first}</span> {second}</p>
+                  </div>
+              ))}
+              <Form />
+              <Footer />
+          </div>
         </div>
     )
 }

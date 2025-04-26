@@ -31,38 +31,40 @@ export default function Form() {
         }
     })
     return(
-        <form onSubmit={formik.handleSubmit} className="flex flex-col gap-6">
-            <div className="flex flex-col gap-2">
-                <label htmlFor="nom" className="text-ibm text-[#888888]">NOM *</label>
-                <input 
-                    id="nom"
-                    name="nom"
-                    type="text"
-                    onChange={formik.handleChange}
-                    value={formik.values.nom} 
-                    className="border-1 border-white rounded-xs w-[50%] p-1 placeholder:text-inter text-inter"
-                    placeholder="SAISSISEZ VOTRE NOM"
-                />
+        <form onSubmit={formik.handleSubmit} className="flex flex-col gap-6 lg:gap-12 lg:text-2xl">
+            <div className="lg:flex lg:items-center lg:mt-3">
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="nom" className="text-ibm text-[#888888] lg:mb-2">NOM *</label>
+                    <input 
+                        id="nom"
+                        name="nom"
+                        type="text"
+                        onChange={formik.handleChange}
+                        value={formik.values.nom} 
+                        className="border-1 border-white rounded-xs w-[80%] lg:w-[92%] p-1 placeholder:text-inter text-inter"
+                        placeholder="SAISSISEZ VOTRE NOM"
+                    />
+                </div>
+                <div className="flex flex-col gap-2 mt-6 lg:mt-0">
+                    <label htmlFor="email" className="text-ibm text-[#888888] lg:mb-2">EMAIL *</label>
+                    <input 
+                        id="email"
+                        name="email"
+                        type="email"
+                        onChange={formik.handleChange}
+                        value={formik.values.email} 
+                        className="border-1 border-white rounded-xs w-[80%] lg:w-[92%] p-1 placeholder:text-inter text-inter"
+                        placeholder="SAISISSEZ VOTRE EMAIL"
+                    />
+                </div>
             </div>
             <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="text-ibm text-[#888888]">EMAIL *</label>
-                <input 
-                    id="email"
-                    name="email"
-                    type="email"
-                    onChange={formik.handleChange}
-                    value={formik.values.email} 
-                    className="border-1 border-white rounded-xs w-[50%] p-1 placeholder:text-inter text-inter"
-                    placeholder="SAISISSEZ VOTRE EMAIL"
-                />
-            </div>
-            <div className="flex flex-col gap-2">
-                <label htmlFor="type" className="text-ibm text-[#888888]">TYPE DE PROJET *</label>
-                <div className="flex gap-x-2">
+                <label htmlFor="type" className="text-ibm text-[#888888] lg:mb-2">TYPE DE PROJET *</label>
+                <div className="flex gap-x-2 lg:gap-x-6">
                     {BUTTONS_LABELS.map((button, i) => (
                         <button
                             type="button"
-                            className="text-[6px] text-inter border-1 rounded-md p-1 cursor-pointer focus:bg-[#ff0000] focus:border-[#ff0000] transition-colors duration-800"
+                            className="text-[6px] text-inter border-1 rounded-md lg:rounded-4xl p-1 lg:p-4 lg:px-12 cursor-pointer focus:bg-[#ff0000] focus:border-[#ff0000] transition-colors duration-800"
                             onClick={() => {setProjectType(button)}}
                         >
                             {button}
@@ -71,7 +73,7 @@ export default function Form() {
                 </div>
             </div>
             <div className="flex flex-col justify-center gap-2">
-                <label htmlFor="description" className="text-ibm text-[#888888]">DESCRIPTION DU PROJET *</label>
+                <label htmlFor="description" className="text-ibm text-[#888888] lg:mb-2">DESCRIPTION DU PROJET *</label>
                 <textarea
                     id="description"
                     name="description"
@@ -84,7 +86,7 @@ export default function Form() {
             </div>
             {isSubmitted ? (
                 <div
-                className={`flex items-center py-1.5 justify-center rounded bg-white text-black
+                className={`flex items-center py-1.5 lg:py-5 lg:rounded-4xl justify-center rounded bg-white text-black
                     ${isFadingOut ? "animate-fade-out" : "animate-fade-in"}
                 `}
                 >
@@ -93,7 +95,7 @@ export default function Form() {
             ) : (
                 <button
                 type="submit"
-                className="text-inter text-[6px] py-1.5 bg-[#ff0000] rounded-md cursor-pointer"
+                className="text-inter text-[6px] py-1.5 lg:py-5 bg-[#ff0000] rounded-md lg:rounded-4xl cursor-pointer"
                 >
                 COMMENCER
                 </button>
@@ -101,5 +103,3 @@ export default function Form() {
         </form>
     )
 }
-
-// pour les erreurs : bords rouges et secousses

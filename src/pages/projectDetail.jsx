@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import NavBar from "../components/navbar"
+import { NavLink } from "react-router-dom"
 import Footer from "../components/footer"
 
 export default function ProjectDetail () {
@@ -28,8 +28,11 @@ export default function ProjectDetail () {
     const { project } = useParams()
     const projectData = PROJECTS_LABELS[project] 
     return(
-        <>
-            <NavBar />
+        <div className="container mx-auto lg:text-2xl">
+            <div className="flex justify-between items-center">
+                <NavLink to="/"><img className="size-8 lg:w-full" src="/images/logo.png" alt="" /></NavLink>
+                <NavLink to="/"><div className="text-[#ff0000] cursor-pointer mb-1" onClick={() => {setContactIsOpen(false)}}><p className="text-base lg:text-4xl">x</p></div></NavLink>
+            </div>
             <div className="text-white text-inter mt-4">  
                 <div className="flex items-center blur-[2px]">
                     <div className="h-0.5 w-full bg-white"></div>
@@ -39,34 +42,34 @@ export default function ProjectDetail () {
                     <h1>{`${projectData.title}`}</h1>
                     <div className="flex items-center gap-2">
                         <h2 className="text-ibm-light">LIEN</h2>
-                        <a target="_blank" href="https://avarinltd.com"><img className="cursor-pointer size-3" src="/images/up.png" alt="" /></a>
+                        <a target="_blank" href="https://avarinltd.com"><img className="cursor-pointer size-3 lg:size-4" src="/images/up.png" alt="" /></a>
                     </div>
                 </div>
                 <span className="flex justify-center"><img className="my-5 w-full" src={`/images/projects/${projectData.src}`} alt="" /></span>
-                <p className="text-stretch text-[9px] opacity-80">DETAILS DU PROJET</p>
+                <p className="text-stretch text-[9px] opacity-80 lg:text-2xl">DETAILS DU PROJET</p>
                 {projectData.p.map((p, i) => (
-                    <p className="text-[9px] my-3">{i === 0 && paragraphParts[0]}{i === 1 && paragraphParts[1]}{p}</p>
+                    <p className="text-[9px] my-3 lg:text-2xl">{i === 0 && paragraphParts[0]}{i === 1 && paragraphParts[1]}{p}</p>
                 ))}
                 <div className="flex justify-around text-left">
                     <div className="flex flex-col w-[45vw]">
-                        <h3 className="text-stretch mt-2 mb-2 opacity-85 text-[9px]">SERVICES</h3>
+                        <h3 className="text-stretch mt-2 mb-2 opacity-85 text-[9px] lg:text-2xl">SERVICES</h3>
                         <ul className="flex flex-wrap"> 
                             {projectData.services.map((el, i) => (
-                                <li className="text-ibm mx-0.5 text-[8px]">{el}</li>
+                                <li className="text-ibm mx-0.5 text-[8px] lg:text-2xl">{el}</li>
                             ))}
                         </ul>
                     </div>
                     <div className="flex flex-col w-[45vw]">
-                        <h3 className="text-stretch mt-2 mb-2 opacity-85 text-[9px]">STACK</h3>
+                        <h3 className="text-stretch mt-2 mb-2 opacity-85 text-[9px] lg:text-2xl">STACK</h3>
                         <ul className="flex flex-wrap">
                             {projectData.stack.map((el, i) => (
-                                <li className="text-ibm mx-0.5 text-[8px]">{el}</li>
+                                <li className="text-ibm mx-0.5 text-[8px] lg:text-2xl">{el}</li>
                             ))}
                         </ul>
                     </div>
                 </div>
                 <Footer />
             </div>
-        </>
+        </div>
     )
 }
