@@ -29,7 +29,7 @@ export default function Form() {
         }, 2000)
     }
     return(
-        <form className="flex flex-col text-[10px] gap-4 text-inter font-semibold" onSubmit={handleSubmit(onSubmit)}>
+        <form className="flex flex-col text-[8px] gap-4 text-inter font-semibold" onSubmit={handleSubmit(onSubmit)}>
 
             {/* NOM */}
             <div className="flex flex-col gap-2">
@@ -47,7 +47,7 @@ export default function Form() {
             {/* TYPE DE PROJET */}
             <div className="flex justify-between text-stretch">
                 {BUTTONS_LABELS.map((label, i) => (
-                    <button onClick={() => {setActiveButton(label)}} {...register(activeButton)} type="button" className={`${activeButton === label && "bg-[#ff0000] border-transparent"} 
+                    <button onClick={() => {setActiveButton(label)}} type="button" className={`${activeButton === label && "bg-[#ff0000] border-transparent"} 
                     cursor-pointer transition-colors duration-800 text-[6px] py-2 border-[1.5px] rounded-2xl lg:rounded-4xl px-2 lg:px-12`}>{label}</button>
                 ))}
             </div>
@@ -69,9 +69,9 @@ export default function Form() {
                     <FaCheck className="animate-bounce mr-2" />
                 </div>
             ) : (
-                <button type="submit" className="text-inter text-[6px] py-1.5 lg:py-5 bg-[#ff0000] rounded-md lg:rounded-4xl cursor-pointer">
+                <div className="text-stretch text-center py-1.5 lg:py-5 bg-[#ff0000] rounded-md lg:rounded-4xl cursor-pointer"><button type="submit" className="">
                 COMMENCER
-                </button>
+                </button></div>
             )}
         </form>
     )
