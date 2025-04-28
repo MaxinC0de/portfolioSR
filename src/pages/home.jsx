@@ -12,10 +12,7 @@ import Contact from "../components/contact"
 // responsive :
     // un bp = lg = 1024px
     // utiliser w-auto et h-auto sur les images et vidéos pour qu'elles scalent sur tout type de container
-<<<<<<< HEAD
-=======
     // utiliser la classe container pour 
->>>>>>> 4ae438a9bda5633ed732bf153541c096ff6a0816
     // hidden md:block pour contrôler la visibilité ou block md:hidden
     // layout pour les classes : une ligne = un bp pour les classname
     // utiliser clsx ? 
