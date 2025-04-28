@@ -6,7 +6,7 @@ export default function Navbar({ contactIsOpen, setContactIsOpen }) {
         <div onClick={() => {setContactIsOpen(!contactIsOpen)}} className="
             bg-primary rounded-md tracking-wider cursor-pointer hover:bg-black transition-colors duration-800 border-1 border-transparent hover:border-[#ff0000] group
             px-3 py-2 ">
-            <p className="text-white group-hover:text-[#ff0000] duration-800 text-[6px] lg:text-lg">CONTACT</p>
+            <p className="text-white group-hover:text-[#ff0000] duration-800 text-[8px] lg:text-lg text-stretch">CONTACT</p>
         </div>
     ) 
     return(

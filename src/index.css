@@ -4,7 +4,6 @@
 html {
   padding: 5%;
   background-color: black;
-  font-family: "stretch";
   font-variant-ligatures: none;
   overflow-x: hidden;
 }
@@ -18,20 +17,28 @@ input {
   padding: 12px;
 }
 
+input, textarea {
+  font-family: "inter";
+}
+
+input:focus {
+  outline: none;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   box-shadow: 0 0 0px 1000px black inset;
   -webkit-text-fill-color: white;
-  font-family: "stretch";
+  font-family: "inter";
   transition: background-color 5000s ease-in-out 0s;
   border: 1;
   border-color: white;
 }
 
 input::placeholder, textarea::placeholder {
-  font-family: "stretch";
+  font-family: "inter";
 }
 
 textarea {

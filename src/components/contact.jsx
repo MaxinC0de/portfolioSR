@@ -21,23 +21,31 @@ export default function Contact({ contactIsOpen, setContactIsOpen }) {
         },
         {
           first: "",
-          second: "Si vous avez des questions ou des doutes sur notre compatibilité, n’hésitez pas à nous contacter."
+          second: "→ Si vous avez des questions ou des doutes sur notre compatibilité, n’hésitez pas à nous contacter."
         }
-      ];
+      ]
       
     return(
         <div className="container mx-auto">
-          <div className="h-screen text-white text-[10px]">
-            <div className="text-[#ff0000] cursor-pointer text-right mt-2 lg:mt-6" onClick={() => {setContactIsOpen(false)}}><p className="text-base lg:text-4xl">x</p></div>
+          <div className="h-screen text-white">
+            <div className="text-[#ff0000] cursor-pointer text-right mt-2 lg:mt-6" onClick={() => {setContactIsOpen(false)}}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                className="size-24 fill-red-500"
+              >
+                <path d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
               <div className="flex items-center blur-[2px] lg:pt-6">
                   <div className="h-0.5 w-full bg-white"></div>
                   <div className="transform rotate-10 ml-2 text-2xl">+</div>
               </div>
-              <p className="text-[#b5b5b5] mt-4 lg:mt-12 lg:text-2xl">DEMANDE DE PROJET</p>
+              <p className="text-inter text-md mt-4 font-bold lg:mt-12 lg:text-2xl">DEMANDE DE PROJET</p>
               
               {LABELS.map(({ first, second }, index) => (
                   <div className="my-4 text-inter">
-                      <p className="lg:text-2xl"><span className="font-extrabold">{first}</span> {second}</p>
+                      <p className="text-xs lg:text-2xl"><span className="font-extrabold">{first}</span> <span className="opacity-85">{second}</span></p>
                   </div>
               ))}
               <Form />

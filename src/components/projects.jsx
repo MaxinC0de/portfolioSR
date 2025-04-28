@@ -45,35 +45,35 @@ export default function Projects() {
                     <img className="w-full" src="/images/banner.png" alt="" />
                 </div>
             }
-            <div className="border-white rounded-md p-5" style={{ overflowX: "hidden" }}>
-                <h1 className="text-[10px] text-center font-extrabold text-dm lg:text-2xl"><Plus />NOS PROJETS<Plus /></h1>
+            <div className="border-white rounded-md" style={{ overflowX: "hidden" }}>
+                <h1 className="text-md text-center font-extrabold text-dm lg:text-2xl mb-6"><Plus />NOS PROJETS<Plus /></h1>
                 <div className="bg-white w-full h-[0.5px] my-1.5 "></div>
                 {PROJECTS.map(({ title, description, project }, i) => (
                     <div className="flex flex-col gap-2">
-                        <div className="flex justify-between text-ibm text-[10px] lg:text-2xl">
-                            <NavLink to={`/${project}`}><p className="cursor-pointer">{title}</p></NavLink>
+                        <div className="flex justify-between text-ibm text-xs lg:text-2xl">
+                            <NavLink to={`/project/${project}`}><p className="cursor-pointer">{title}</p></NavLink>
                             <div className="flex items-center">
                                 <p className="text-ibm-light">{description}</p>
-                                <NavLink to={`/${project}`}><img className="size-2 ml-2" src="/images/up.png" alt="" /></NavLink>
+                                <NavLink to={`/project/${project}`}><img className="size-2 ml-2" src="/images/up.png" alt="" /></NavLink>
                             </div>
                         </div>
                         <Divider />
                     </div>
                 ))}
             </div>
-            <h1 className="text-center text-4xl my-12">A PROPOS DE NOUS</h1>
+            <h1 className="text-center text-inter font-extrabold text-md lg:text-2xl my-6"><Plus />A PROPOS DE NOUS<Plus /></h1>
             <div>
                 <ul className="text-inter text-xs lg:text-2xl">
                     {LABELS_STUDIO.p.map((p, i) => (
-                        <p className="my-3">{i === 0 && <p className="text-[#ff0000] inline-flex mr-2">Studio Regenade</p>}{p}</p>
+                        <p className="my-3 opacity-90">{i === 0 && <p className="text-[#ff0000] inline-flex mr-2 font-extrabold">Studio Regenade</p>}{p}</p>
                     ))}
                 </ul>
             </div>
             <div>
-                <h3 className="text-dm font-bold opacity-80 text-xs lg:text-2xl">NOS SERVICES</h3>
-                <ul className="flex flex-col list-disc list-inside">
+                <h1 className="text-dm font-bold text-center text-white text-md lg:text-2xl my-6"><Plus />NOS SERVICES<Plus /></h1>
+                <ul className="flex flex-col opacity-90">
                     {LABELS_STUDIO.services.map((el, i) => (
-                        <li className="text-inter text-[10px] my-[0.5px] lg:text-2xl">{el}</li>
+                        <li className="text-inter text-xs lg:text-2xl">→ {el}</li>
                     ))}
                 </ul>
             </div>
