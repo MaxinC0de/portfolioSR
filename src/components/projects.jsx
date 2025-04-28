@@ -62,9 +62,10 @@ export default function Projects() {
                     </div>
                 ))}
             </div>
-            <div className="-mx-[5vw]">
-                <img src="/images/cinema.png" alt="" />
-            </div>
+            {/* <div className="-mx-[5vw]">
+                <img className="w-auto h-auto" src="/images/cinema.png" alt="" />
+            </div> */}
+            <h1 className="text-center text-4xl my-12">A PROPOS DE NOUS</h1>
             <div>
                 <ul className="text-inter text-xs lg:text-2xl">
                     {LABELS_STUDIO.p.map((p, i) => (
