@@ -18,6 +18,22 @@ input {
   padding: 12px;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0px 1000px black inset;
+  -webkit-text-fill-color: white;
+  font-family: "stretch";
+  transition: background-color 5000s ease-in-out 0s;
+  border: 1;
+  border-color: white;
+}
+
+input::placeholder, textarea::placeholder {
+  font-family: "stretch";
+}
+
 textarea {
   padding: 12px;
 }
@@ -62,27 +78,27 @@ textarea {
 
 @font-face {
   font-family: "stretch";
-  src: url("/src/fonts/stretch.otf");
+  src: url("/fonts/stretch.otf") format("opentype");
 }
 
 @font-face {
   font-family: "inter";
-  src: url("/src/fonts/inter.ttf");
+  src: url("/fonts/inter.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "ibm";
-  src: url("/src/fonts/ibm.ttf");
+  src: url("/fonts/ibm.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "dm";
-  src: url("/src/fonts/dm.ttf");
+  src: url("/fonts/dm.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "ibm-light";
-  src: url("/src/fonts/ibm-light.ttf")
+  src: url("/fonts/ibm-light.ttf") format("truetype");
 }
 
 /* General styling for the scrollbar track */

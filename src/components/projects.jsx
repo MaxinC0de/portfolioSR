@@ -1,10 +1,9 @@
 import { NavLink } from "react-router-dom"
 import Footer from "./footer"
-import { useBreakpoint } from "./breakpointContext"
-import { div } from "framer-motion/client"
+import useStore from "./store"
 
 export default function Projects() {
-    const desktop = useBreakpoint()
+    const { isDesktop } = useStore()
     const LABELS_STUDIO = {
         p: ["est un studio créatif indépendant qui conçoit des marques, des expériences numériques et des solutions technologiques pour faire avancer des projets porteurs de sens.", "Nos clients nous considèrent comme des partenaires de confiance, investis à leurs côtés — ce qui, entre nous, est presque trompeur, car nous sommes encore plus engagés qu’eux.", "Quel que soit leur secteur d’activité, ils partagent tous une même ambition : occuper une place sincère et significative dans la vie de leurs publics et utilisateurs."],
         services: ["Web Design", "Developpement de site web", "Copywriting", "Optimisation SEO", "Design graphique", "Photographie", "Retouche photo"]
@@ -37,7 +36,7 @@ export default function Projects() {
     )
     return(
         <div className="container mx-auto text-white mt-6">
-            {desktop ? 
+            {isDesktop ? 
                 <div className="flex justify-center text-[5vw]">
                     <h1 className="text-center">STUDIO REGENADE</h1>
                 </div>
@@ -62,9 +61,6 @@ export default function Projects() {
                     </div>
                 ))}
             </div>
-            {/* <div className="-mx-[5vw]">
-                <img className="w-auto h-auto" src="/images/cinema.png" alt="" />
-            </div> */}
             <h1 className="text-center text-4xl my-12">A PROPOS DE NOUS</h1>
             <div>
                 <ul className="text-inter text-xs lg:text-2xl">

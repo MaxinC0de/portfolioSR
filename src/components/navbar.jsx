@@ -1,7 +1,7 @@
-import { useBreakpoint } from "./breakpointContext"
+import useStore from "./store"
 
 export default function Navbar({ contactIsOpen, setContactIsOpen }) {
-    const { isDesktop } = useBreakpoint()
+    const { isDesktop } = useStore()
     const ContactButton = () => (
         <div onClick={() => {setContactIsOpen(!contactIsOpen)}} className="
             bg-primary rounded-md tracking-wider cursor-pointer hover:bg-black transition-colors duration-800 border-1 border-transparent hover:border-[#ff0000] group

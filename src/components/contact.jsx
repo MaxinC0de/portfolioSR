@@ -1,4 +1,4 @@
-import Form from "./form";
+import Form from "./form/form"
 import Footer from "./footer"
 
 export default function Contact({ contactIsOpen, setContactIsOpen }) {
