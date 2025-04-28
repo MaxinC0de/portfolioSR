@@ -65,7 +65,7 @@ export default function Projects() {
             <div>
                 <ul className="text-inter text-xs lg:text-2xl">
                     {LABELS_STUDIO.p.map((p, i) => (
-                        <p className="my-3 opacity-90">{i === 0 && <p className="text-[#ff0000] inline-flex mr-2 font-extrabold">Studio Regenade</p>}{p}</p>
+                        <p className="my-3 opacity-50">{i === 0 && <p className="text-[#ff0000] inline-flex mr-2 font-extrabold">Studio Regenade</p>}{p}</p>
                     ))}
                 </ul>
             </div>
