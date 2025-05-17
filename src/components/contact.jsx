@@ -27,16 +27,17 @@ export default function Contact({ contactIsOpen, setContactIsOpen }) {
       
     return(
         <div className="container mx-auto">
+          
+
+          
           <div className="h-screen text-white">
-            <div className="text-[#ff0000] cursor-pointer text-right mt-2 lg:mt-6" onClick={() => {setContactIsOpen(false)}}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                className="size-24 fill-red-500"
-              >
-                <path d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </div>
+            <div className="flex justify-end">
+                <div onClick={() => {setContactIsOpen(false)}} className="
+                    rounded-md tracking-wide cursor-pointer hover:bg-[#ff0000] transition-colors duration-200 border-1 border-[#ff0000] hover:border-[#ff0000] group
+                    px-3 py-2 inline-flex">
+                    <p className="text-[#ff0000] group-hover:text-black duration-200 text-[8px] lg:text-[16px] font-extrabold text-inter">FERMER</p>
+                </div>
+              </div>
               <div className="flex items-center blur-[2px] lg:pt-6">
                   <div className="h-0.5 w-full bg-white"></div>
                   <div className="transform rotate-10 ml-2 text-2xl">+</div>

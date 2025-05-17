@@ -5,7 +5,8 @@ html {
   padding: 5%;
   background-color: black;
   font-variant-ligatures: none;
-  overflow-x: hidden;
+  overflow-y: hidden;
+  font-family: "neue";
 }
 
 .button {
@@ -52,20 +53,14 @@ textarea {
   .bg-primary {
     background-color: #ff0000;
   }
+  .text-neue {
+    font-family: "neue";
+  }
+  .text-neue-bold {
+    font-family: "neue-bold";
+  }
   .text-inter {
     font-family: "inter";
-  }
-  .text-ibm {
-    font-family: "ibm";
-  }
-  .text-ibm-light {
-    font-family: "ibm-light";
-  }
-  .text-dm {
-    font-family: "dm";
-  }
-  .text-stretch {
-    font-family: "stretch";
   }
   .animate-fade-in {
     animation: fade-in 0.5s ease-in;
@@ -84,8 +79,8 @@ textarea {
 }
 
 @font-face {
-  font-family: "stretch";
-  src: url("/fonts/stretch.otf") format("opentype");
+  font-family: "neue";
+  src: url("/fonts/neue.otf");
 }
 
 @font-face {
@@ -94,18 +89,8 @@ textarea {
 }
 
 @font-face {
-  font-family: "ibm";
-  src: url("/fonts/ibm.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "dm";
-  src: url("/fonts/dm.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "ibm-light";
-  src: url("/fonts/ibm-light.ttf") format("truetype");
+  font-family: "neue-bold";
+  src: url("/fonts/neue-bold.otf");
 }
 
 /* General styling for the scrollbar track */

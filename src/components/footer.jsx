@@ -1,7 +1,9 @@
 export default function Footer() {
     return(
-        <div className="relative mt-6 pb-2">
-            <p className="text-right text-stretch text-[8px] lg:text-lg">2025 ©</p>
+        <div className="mt-6 text-white">
+            <p className="text-right text-[8px] lg:text-lg">2025 ©</p>
+            <p>123345784</p>
+            <p>email = lala@gmail.com</p>
         </div>
     )
 }

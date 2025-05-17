@@ -1,23 +1,27 @@
 import useStore from "./store"
+import ScrollingHeadband from "./scrollingHeadband"
 
 export default function Navbar({ contactIsOpen, setContactIsOpen }) {
     const { isDesktop } = useStore()
     const ContactButton = () => (
-        <div onClick={() => {setContactIsOpen(!contactIsOpen)}} className="
-            bg-primary rounded-md tracking-wider cursor-pointer hover:bg-black transition-colors duration-800 border-1 border-transparent hover:border-[#ff0000] group
+        <div onClick={() => {setContactIsOpen(true)}} className="
+            bg-primary rounded-md tracking-wide cursor-pointer hover:bg-black transition-colors duration-800 border-1 border-transparent hover:border-[#ff0000] group
             px-3 py-2 ">
-            <p className="text-white group-hover:text-[#ff0000] duration-800 text-[8px] lg:text-lg text-stretch">CONTACT</p>
+            <p className="text-white group-hover:text-[#ff0000] duration-800 text-[8px] lg:text-[16px] font-extrabold text-inter">CONTACT</p>
         </div>
     ) 
     return(
         <>
             {isDesktop ? 
-                <div className="flex justify-between">
+                <div className="flex justify-between mb-4">
                     <div className="flex gap-5">
                         <img className="cursor-pointer" src="/images/triangle.png" alt="" />
                         <img className="cursor-pointer" src="/images/cursor.png" />
                     </div>
-                    <ContactButton />
+                    <div className="flex">
+                        <ScrollingHeadband />
+                        <ContactButton />
+                    </div>
                 </div>
                 :
                 <div className="flex justify-between items-center">
