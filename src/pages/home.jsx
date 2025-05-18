@@ -9,12 +9,17 @@ import ProjectDetails from "../components/projectDetails"
 import Banner from "../components/banner"
 import Footer from "../components/footer"
 import MouseFollower from "../components/mouseFollower"
+import useScreenListener from "../components/useScreenListener"
+import useStore from "../components/store"
+import ScrollingHeadband from "../components/scrollingHeadband"
 
 export default function Home() {
+    useScreenListener()
+    const isDesktop = useStore((state) => state.isDesktop)
     const [contactIsOpen, setContactIsOpen] = useState(false)
     const contactProps = { contactIsOpen, setContactIsOpen }
     return (
-        <div className="overflow-hidden">
+        <div className="">
             <MouseFollower />
             <AnimatePresence>
                     <motion.div
@@ -25,19 +30,25 @@ export default function Home() {
                     >
                         <Navbar {...contactProps} />
                         <Banner />
-                        <div className="flex gap-x-12">
-                            <section className="flex flex-col w-[25vw]">
-                                <About />
-                                <div className="w-[0.5px] h-full "></div>
-                                <Services />
-                            </section>
-                            <div className="w-[25vw]">
+                        {isDesktop === false && <ScrollingHeadband />}
+                        <div className={`flex gap-6 ${isDesktop ? "flex" : "flex flex-col-reverse"}`}>
+                            <div className={isDesktop ? "overflow-y-scroll overflow-x-hidden" : ""}>
+                                <section className={`flex flex-col overflow-hidden ${isDesktop ? "w-[25vw]" : "w-full"}`}>
+                                    <About />
+                                    <div className="w-[0.5px] h-full "></div>
+                                    <Services />
+                                </section>
+                            </div>
+                            
+                            <div className={`${isDesktop ? "w-[25vw]" : "w-full"}`}>
                                 <Projects />
                             </div>
-                            <div className="w-[50vw]">
-                                <h1 className="text-[#909090] lg:text-lg font-extrabold mb-12">DETAILS DU PROJET</h1>
-                                <ProjectDetails />
-                            </div>
+                            {isDesktop && 
+                                <div className="w-[50vw]">
+                                    <h1 className="text-[#909090] md:text-lg font-extrabold mb-12 md:mb-0">DETAILS DU PROJET</h1>
+                                    <ProjectDetails />
+                                </div>
+                            }
                         </div>
                         <div className="h-[0.5px] w-[90vw] bg-[#fffef4] opacity-80 mt-6"></div>
                         <Footer />

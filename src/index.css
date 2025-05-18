@@ -5,8 +5,8 @@ html {
   padding: 5%;
   background-color: black;
   font-variant-ligatures: none;
-  overflow-y: hidden;
   font-family: "neue";
+  height: screen;
 }
 
 .button {

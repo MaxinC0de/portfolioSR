@@ -7,7 +7,7 @@ export default function Navbar({ contactIsOpen, setContactIsOpen }) {
         <div onClick={() => {setContactIsOpen(true)}} className="
             bg-primary rounded-md tracking-wide cursor-pointer hover:bg-black transition-colors duration-800 border-1 border-transparent hover:border-[#ff0000] group
             px-3 py-2 ">
-            <p className="text-white group-hover:text-[#ff0000] duration-800 text-[8px] lg:text-[16px] font-extrabold text-inter">CONTACT</p>
+            <p className="text-white group-hover:text-[#ff0000] duration-800 text-[8px] md:text-[16px] font-extrabold text-inter">CONTACT</p>
         </div>
     ) 
     return(
@@ -24,7 +24,7 @@ export default function Navbar({ contactIsOpen, setContactIsOpen }) {
                     </div>
                 </div>
                 :
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center mb-4">
                     <img className="w-[32px] h-auto flex-shrink-0" src="/images/logo.png" alt="" />
                     <ContactButton />
                 </div>
