@@ -1,0 +1,26 @@
+[
+    {
+        "project": "plombier-plus",
+        "title": "PLOMBIER +",
+        "description": "ARTISANAT",
+        "src": ["", ""]
+    },
+    {
+        "project": "avarin",
+        "title": "AVARIN",
+        "description": "MARKETING",
+        "src": []
+    },
+    {
+        "project": "la-maison-du-solitaire",
+        "title": "LA MAISON DU SOLITAIRE",
+        "description": "E-COMMERCE",
+        "src": []
+    },
+    {
+        "project": "didus-art",
+        "title": "DIDUS ART",
+        "description": "ART",
+        "src": []
+    }
+]

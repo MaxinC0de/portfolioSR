@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 html {
-  padding: 5%;
+  padding: 2vw;
   background-color: black;
   font-variant-ligatures: none;
   font-family: "neue";

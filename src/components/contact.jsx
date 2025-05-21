@@ -24,6 +24,8 @@ export default function Contact({ contactIsOpen, setContactIsOpen }) {
           second: "→ Si vous avez des questions ou des doutes sur notre compatibilité, n’hésitez pas à nous contacter."
         }
       ]
+
+      
       
     return(
         <div className="container mx-auto">
