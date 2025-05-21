@@ -3,7 +3,7 @@ import { useState } from "react"
 export default function InputField({ error, register, label, placeholder, type }) {
     const [activeButton, setActiveButton] = useState("")
     const BUTTONS_LABELS = ["SITE WEB", "PHOTO", "DESIGN", "AUTRE"]
-    const labelClass = "text-ibm-light text-xs text-[#888888] lg:mb-2"
+    const labelClass = "text-ibm-light text-xs text-[#888888] md:mb-2 md:text-2xl"
     if (type === "textarea") {
         return(
             <div className="flex flex-col gap-2">
@@ -24,7 +24,7 @@ export default function InputField({ error, register, label, placeholder, type }
                 <div className="flex justify-between">
                     {BUTTONS_LABELS.map((label, i) => (
                         <button onClick={() => {setActiveButton(label)}} type="button" className={`${activeButton === label && "bg-[#ff0000] border-transparent"} 
-                        cursor-pointer transition-colors duration-800 text-[6px] py-2 border-[1.5px] rounded-2xl lg:rounded-4xl px-2 lg:px-12`}>{label}</button>
+                        cursor-pointer transition-colors duration-800 text-[6px] py-2 border-[1.5px] rounded-2xl md:rounded-4xl px-2 md:px-12`}>{label}</button>
                     ))}
                 </div>  
             </div>

@@ -54,7 +54,7 @@ export default function Projects({ handleProjectSelect }) {
                 transition={{ duration: 0.2, ease: "easeInOut", delay: 0.1 }}
               />
               <motion.p
-                className={`text-neue-bold md:text-[1.11vw] ${focusedTitle === title ? "text-[#ff0000]" : "text-[#fffef4]"} text-[16px]`}
+                className={`text-neue-bold md:text-base text-left ${focusedTitle === title ? "text-[#ff0000]" : "text-[#fffef4]"} text-[16px]`}
                 animate={{ x: focusedTitle === title ? 25 : 0 }}
                 transition={{ type: "twin", duration: 0.4, ease: "easeInOut" }}
               >
@@ -64,7 +64,7 @@ export default function Projects({ handleProjectSelect }) {
                 <p
                   className={`text-inter mr-12 md:mr-0 ${
                     focusedTitle === title ? "text-[#ff0000]" : ""
-                  } md:text-[0.83vw] md:font-light text-[2.2vw] font-semibold`}
+                  } md:text-base md:font-light text-[2.2vw] font-semibold`}
                 >
                   {description}
                 </p>

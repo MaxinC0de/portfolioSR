@@ -37,18 +37,18 @@ export default function Contact({ contactIsOpen, setContactIsOpen }) {
                 <div onClick={() => {setContactIsOpen(false)}} className="
                     rounded-md tracking-wide cursor-pointer hover:bg-[#ff0000] transition-colors duration-200 border-1 border-[#ff0000] hover:border-[#ff0000] group
                     px-3 py-2 inline-flex">
-                    <p className="text-[#ff0000] group-hover:text-black duration-200 text-[8px] lg:text-[16px] font-extrabold text-inter">FERMER</p>
+                    <p className="text-[#ff0000] group-hover:text-black duration-200 text-[8px] md:text-[16px] font-extrabold text-inter">FERMER</p>
                 </div>
               </div>
-              <div className="flex items-center blur-[2px] lg:pt-6">
+              <div className="flex items-center blur-[2px] md:pt-6">
                   <div className="h-0.5 w-full bg-white"></div>
                   <div className="transform rotate-10 ml-2 text-2xl">+</div>
               </div>
-              <p className="text-inter text-md mt-4 font-bold lg:mt-12 lg:text-2xl">DEMANDE DE PROJET</p>
+              <p className="text-inter text-md mt-4 font-bold md:mt-12 md:text-2xl">DEMANDE DE PROJET</p>
               
               {LABELS.map(({ first, second }, index) => (
                   <div className="my-4 text-inter">
-                      <p className="text-xs lg:text-2xl"><span className="font-extrabold">{first}</span> <span className="opacity-85">{second}</span></p>
+                      <p className="text-xs md:text-2xl"><span className="font-extrabold">{first}</span> <span className="opacity-85">{second}</span></p>
                   </div>
               ))}
               <Form />

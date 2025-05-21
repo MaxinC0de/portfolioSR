@@ -18,7 +18,7 @@ export default function Form() {
 
     const [isSubmitted, setIsSubmitted] = useState(false)
     const [isFadingOut, setIsFadingOut] = useState(false)
-    const labelClass = "text-ibm-light text-xs text-[#888888] lg:mb-2"
+    const labelClass = "text-ibm-light text-xs text-[#888888] md:mb-2 md:text-2xl"
 
     const onSubmit = (data) => {
         console.log("Form data submitted :", data)

@@ -25,8 +25,15 @@ export default function Home() {
     const handleProjectSelect = (title) => {
         setCurrentTitle(title)
     }
+    const Divider = () => (
+        <div>  
+            {isDesktop && 
+                <div className="h-full w-0.5 bg-[#fffef4] opacity-80"></div>
+            }
+        </div>
+    )
     return (
-        <div className="">
+        <>
             {isDesktop && <MouseFollower />}
             <AnimatePresence>
                     <motion.div
@@ -40,16 +47,17 @@ export default function Home() {
                         {isDesktop === false && <ScrollingHeadband />}
                         <div className={`flex gap-6 ${isDesktop ? "flex" : "flex flex-col-reverse"}`}>
                             <div className={isDesktop ? "overflow-y-scroll overflow-x-hidden" : ""}>
-                                <section className={`flex flex-col overflow-hidden ${isDesktop ? "w-[30vw]" : "w-full"}`}>
+                                <section className={`${isDesktop ? "w-[30vw] text-wrap" : "w-full"}`}>
                                     <About />
                                     <div className="w-[0.5px] h-full "></div>
                                     <Services />
                                 </section>
                             </div>
-                            
+                            <Divider />
                             <div className={`${isDesktop ? "w-[30vw]" : "w-full"}`}>
                                 <Projects handleProjectSelect={handleProjectSelect} />
                             </div>
+                            <Divider />
                             {isDesktop && 
                                 <div className="w-[40vw]">
                                     <h1 className="text-[#909090] md:text-lg font-extrabold mb-12 md:mb-0">DETAILS DU PROJET</h1>
@@ -76,6 +84,6 @@ export default function Home() {
                     }
                 
             </AnimatePresence>
-        </div>
+        </>
     )
 }
