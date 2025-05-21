@@ -69,7 +69,7 @@ export default function Home() {
                         <Footer />
                     </motion.div>
                     {contactIsOpen && 
-                    <div ref={ref} className="fixed top-0 right-0 w-[50vw] h-screen z-50">
+                    <div ref={ref} className="fixed top-0 right-0 w-[80vw] h-screen z-50">
                         <motion.div
                             key="contact-modal"
                             initial={{ x: "100%" }}
