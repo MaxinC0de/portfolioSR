@@ -64,7 +64,7 @@ export default function Projects({ handleProjectSelect }) {
                 <p
                   className={`text-inter mr-12 md:mr-0 ${
                     focusedTitle === title ? "text-[#ff0000]" : ""
-                  } md:text-base md:font-light text-[2.2vw] font-semibold`}
+                  } md:text-base md:font-light text-base font-semibold`}
                 >
                   {description}
                 </p>
