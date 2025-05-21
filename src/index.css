@@ -2,11 +2,12 @@
 @import "tailwindcss";
 
 html {
-  padding: 2vw;
+  padding: 3.5vw;
   background-color: black;
   font-variant-ligatures: none;
   font-family: "neue";
   height: screen;
+  overflow-x: hidden;
 }
 
 .button {
