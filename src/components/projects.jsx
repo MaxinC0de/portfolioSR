@@ -2,14 +2,15 @@ import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 import useStore from "./store"
 import ProjectDetails from "./projectDetails"
-import { SquarePlus } from "lucide-react"
+import { SquarePlus, ExternalLink } from "lucide-react"
+import { NavLink } from "react-router-dom"
 
 export default function Projects({ handleProjectSelect }) {
   const isDesktop = useStore((state) => state.isDesktop)
   const PROJECTS = [
-    { id: "1", title: "AVARIN", description: "MARKETING", project: "avarin" },
-    { id: "2", title: "DIDUS-ART", description: "ART", project: "didus-art" },
-    { id: "3", title: "LA-MAISON-DU-SOLITAIRE", description: "E-COMMERCE", project: "la-maison-du-solitaire" },
+    { id: "1", title: "AVARIN", titleProject: "AVARIN", description: "MARKETING", project: "avarin", link: "https://avarinltd.com/" },
+    { id: "2", title: "DIDUS-ART", titleProject: "DIDUS ART", description: "ART", project: "didus-art", link: "https://didusart.com/" },
+    { id: "3", title: "LA-MAISON-DU-SOLITAIRE", titleProject: "LA MAISON DU SOLITAIRE", description: "E-COMMERCE", project: "la-maison-du-solitaire", link: "https://lamaisondusolitaire.com/" },
   ]
 
   useEffect(() => {
@@ -41,7 +42,7 @@ export default function Projects({ handleProjectSelect }) {
     <div className="text-[#fffef4]">
       <h1 className="text-[#909090] text-[3vw] md:text-lg font-extrabold my-4 md:mt-0">NOS PROJETS</h1>
       <ul className="flex flex-col gap-2">
-        {PROJECTS.map(({ id, title, description }) => (
+        {PROJECTS.map(({ id, title, description, link, titleProject }) => (
           <li key={id} className="py-3 border-t-[0.5px] border-[#909090]">
             <button
               onClick={() => isDesktop && handleClick(title)}
@@ -58,16 +59,17 @@ export default function Projects({ handleProjectSelect }) {
                 animate={{ x: focusedTitle === title ? 25 : 0 }}
                 transition={{ type: "twin", duration: 0.4, ease: "easeInOut" }}
               >
-                {title}
+                {titleProject}
               </motion.p>
-              <div className="flex items-center ml-auto">
+              <div className="flex items-center ml-auto gap-x-5">
                 <p
-                  className={`text-inter mr-12 md:mr-0 ${
+                  className={`text-inter text-rgith md:mr-0 ${
                     focusedTitle === title ? "text-[#ff0000]" : ""
                   } md:text-base md:font-light text-base font-semibold`}
                 >
                   {description}
                 </p>
+                <a href={`${link}`} className={`${focusedTitle === title && "text-[#ff0000]"}`} target="_blank"><ExternalLink></ExternalLink></a>
                 {!isDesktop && (
                   <button onClick={(e) => handleMobileClick(e, id, title)}>
                     <SquarePlus
